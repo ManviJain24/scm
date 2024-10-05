@@ -1,32 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <h1>this is services page</h1>
-     <hr />
-     <!-- using fragment -->
-    <div th:replace="~{base :: parent(~{::p})}">
-        <section id="main-content">
-            <p>
-                this is dynamic content passed.
-            </p>
-        </section>
-        <section id="second-content">
-            <p>
-                this is second content passed.
-            </p>
-        </section>
-        <section id="third-content">
-            <p>
-                this is third content passed.
-            </p>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+    <head>
+        <title>Services Page</title>
+    </head>
+    <body>
+        <section id="content">
+            <h1>Welcome to services Page</h1>
+            <h2>here, you can access services.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda voluptate temporibus quod maiores ducimus quos voluptatum earum dolorum. Doloremque consequatur esse quod ipsum quas dolore doloribus optio nesciunt quam distinctio.</p>
         </section>
         
-    </div>
-
-</body>
+    </body>
 </html>
