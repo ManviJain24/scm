@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" th:fragment="parent" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="parent-fragment" th:fragment="parent(content)">
+    <h1>this is parent fragment</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi laboriosam, delectus quo libero suscipit repellendus tenetur aliquam sed aut doloremque maxime quaerat saepe praesentium ipsum necessitatibus iure harum facilis! Incidunt.</p>
+    <div th:replace="${content}"></div>
+</div>
+
+<div th:fragment="test(content)">
+    <!-- when we are not passing any content in test then the tags in test are printed like h1 -->
+    <!-- <h1>this is test fragemnt</h1> -->
+    <div th:replace="${content}"></div>
+</div>

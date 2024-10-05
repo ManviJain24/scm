@@ -10,9 +10,22 @@
      <hr />
      <!-- using fragment -->
     <div th:replace="~{base :: parent(~{::p})}">
-        <p>
-            this is dynamic content passed.
-        </p>
+        <section id="main-content">
+            <p>
+                this is dynamic content passed.
+            </p>
+        </section>
+        <section id="second-content">
+            <p>
+                this is second content passed.
+            </p>
+        </section>
+        <section id="third-content">
+            <p>
+                this is third content passed.
+            </p>
+        </section>
+        
     </div>
 
 </body>
